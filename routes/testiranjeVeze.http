@@ -1,0 +1,82 @@
+// za car
+GET http://127.0.0.1:8000/api/cars/listing HTTP/1.1
+
+###
+
+POST  http://127.0.0.1:8000/api/cars/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "registration_license": "m45",
+    "brand": "ferrari",
+    "model": "white",
+    "manufacture_date": "m53mfs2",
+    "description": "mali",
+    "category_id": "2",
+    "properties": "svaki"
+    
+}
+
+###
+
+put  http://127.0.0.1:8000/api/cars/update/1
+Content-type: application/json
+
+{
+    "registration_license": "m53fgfm2(update)",
+    "brand": "mercedes",
+    "model": "red",
+    "manufacture_date": "m53m2",
+    "description": "mali",
+    "category_id": "2",
+    "properties": "svaki"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/cars/delete/2
+
+
+###
+// za categorije
+GET http://127.0.0.1:8000/api/category/listing HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/category/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "mik",
+    "price": "1000",
+    "parent_id": "6"  
+}
+###
+put  http://127.0.0.1:8000/api/category/update/2
+Content-type: application/json
+
+{
+    "name": "nikaa(update)",
+    "price": "13132",
+    "parent_id": "3"  
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/category/delete/2
+###
+
+// za trazenje po brand
+
+GET http://127.0.0.1:8000/api/search/brand/ferrari
+
+
+// za trazenje po cijeni
+###
+GET http://127.0.0.1:8000/api/search/price/60-6000
+
+####
+// za trazenje po modelu
+GET http://127.0.0.1:8000/api/search/model/red
+
+###
+GET http://127.0.0.1:8000/api/search/price/500-1200
